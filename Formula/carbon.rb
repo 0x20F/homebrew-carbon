@@ -5,20 +5,20 @@
 class Carbon < Formula
   desc "Build tool for custom configuration of multiple smaller services, and wrapper commands for docker containers to make your life easier."
   homepage "https://github.com/0x20F/homebrew-carbon"
-  version "1.0.2"
+  version "1.0.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/0x20F/carbon/releases/download/v1.0.2/carbon_1.0.2_Darwin_arm64.tar.gz"
-      sha256 "f0b249c7f86cd768ce28c7105b4e89320edeb86de673148201b9cc0d00fc2446"
+    if Hardware::CPU.intel?
+      url "https://github.com/0x20F/carbon/releases/download/v1.0.3/carbon_1.0.3_Darwin_x86_64.tar.gz"
+      sha256 "890de9daf7e350fc181399dfb26342ab3410006eb4f4fa91cd971464e1e7361e"
 
       def install
         bin.install "carbon"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/0x20F/carbon/releases/download/v1.0.2/carbon_1.0.2_Darwin_x86_64.tar.gz"
-      sha256 "e0dd79faee5b71c1ffadedaa796612ba2293c6209db042c5863ef60c4e1a7b41"
+    if Hardware::CPU.arm?
+      url "https://github.com/0x20F/carbon/releases/download/v1.0.3/carbon_1.0.3_Darwin_arm64.tar.gz"
+      sha256 "2ee40affcc67d4baa7bb8d43935ac2c8784e3f69cadf89dac1e49172f6347403"
 
       def install
         bin.install "carbon"
@@ -27,17 +27,17 @@ class Carbon < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/0x20F/carbon/releases/download/v1.0.2/carbon_1.0.2_Linux_arm64.tar.gz"
-      sha256 "524c9854aad3a00cc47c0274078e46ac33ad3c9c056b254df062b6242b62ee12"
+    if Hardware::CPU.intel?
+      url "https://github.com/0x20F/carbon/releases/download/v1.0.3/carbon_1.0.3_Linux_x86_64.tar.gz"
+      sha256 "f89f32b0e5aacc47bda4fc2616afe85d25d7f6f6a69545302b9924bd6d8cf3ec"
 
       def install
         bin.install "carbon"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/0x20F/carbon/releases/download/v1.0.2/carbon_1.0.2_Linux_x86_64.tar.gz"
-      sha256 "da326e523c24f3358f4f3293c91674487e8872b1c6cef8b8c5c3f03e5b0c5dc1"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/0x20F/carbon/releases/download/v1.0.3/carbon_1.0.3_Linux_arm64.tar.gz"
+      sha256 "1a79abc5eb22297c631218b4e8d25decd4f179abc78b0a8f64b5f74dde928e41"
 
       def install
         bin.install "carbon"
