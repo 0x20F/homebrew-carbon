@@ -5,20 +5,20 @@
 class Carbon < Formula
   desc "Build tool for custom configuration of multiple smaller services, and wrapper commands for docker containers to make your life easier."
   homepage "https://github.com/0x20F/homebrew-carbon"
-  version "1.1.0"
+  version "1.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/0x20F/carbon/releases/download/v1.1.0/carbon_1.1.0_Darwin_x86_64.tar.gz"
-      sha256 "252c5d89142e7e0177caea576b44e08335330ac899259ef14d783c9caee35810"
+      url "https://github.com/0x20F/carbon/releases/download/v1.1.1/carbon_1.1.1_Darwin_x86_64.tar.gz"
+      sha256 "19129915175bc844d4e06ae70de97e8d48787eb89b36f580d5755655fff007a0"
 
       def install
         bin.install "carbon"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/0x20F/carbon/releases/download/v1.1.0/carbon_1.1.0_Darwin_arm64.tar.gz"
-      sha256 "145318e30c21d74826979424eadbdea9317334fcdfea4b7b1037b376c67810e0"
+      url "https://github.com/0x20F/carbon/releases/download/v1.1.1/carbon_1.1.1_Darwin_arm64.tar.gz"
+      sha256 "c545a765fbe2202f46e037d0cd8f5b699efcb6418d7e8acfdb570f7a60322bce"
 
       def install
         bin.install "carbon"
@@ -28,16 +28,16 @@ class Carbon < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/0x20F/carbon/releases/download/v1.1.0/carbon_1.1.0_Linux_arm64.tar.gz"
-      sha256 "e0367e5a557b4e2f25930ac2c479a1c7b67b443452341bf96062382deb8e3bf1"
+      url "https://github.com/0x20F/carbon/releases/download/v1.1.1/carbon_1.1.1_Linux_arm64.tar.gz"
+      sha256 "8eac879cbd0e39d07b5f9dc5b34808603a1bcf33415f65ba165da1ac20daf40e"
 
       def install
         bin.install "carbon"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/0x20F/carbon/releases/download/v1.1.0/carbon_1.1.0_Linux_x86_64.tar.gz"
-      sha256 "1471e384c5274c4dcc0496414afa6c5e1777bc137a263efeabc12952d0f1a6c3"
+      url "https://github.com/0x20F/carbon/releases/download/v1.1.1/carbon_1.1.1_Linux_x86_64.tar.gz"
+      sha256 "274e7dca207a149bf342db0b7442e0016732f585c484003b05dc215250b844e1"
 
       def install
         bin.install "carbon"
