@@ -5,20 +5,20 @@
 class Carbon < Formula
   desc "Build tool for custom configuration of multiple smaller services, and wrapper commands for docker containers to make your life easier."
   homepage "https://github.com/0x20F/homebrew-carbon"
-  version "1.1.1"
+  version "1.1.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/0x20F/carbon/releases/download/v1.1.1/carbon_1.1.1_Darwin_x86_64.tar.gz"
-      sha256 "19129915175bc844d4e06ae70de97e8d48787eb89b36f580d5755655fff007a0"
+    if Hardware::CPU.arm?
+      url "https://github.com/0x20F/carbon/releases/download/v1.1.2/carbon_1.1.2_Darwin_arm64.tar.gz"
+      sha256 "322c588735f468ec5db6e9f0493e3945923fd255527b91d79238a34534f7227a"
 
       def install
         bin.install "carbon"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/0x20F/carbon/releases/download/v1.1.1/carbon_1.1.1_Darwin_arm64.tar.gz"
-      sha256 "c545a765fbe2202f46e037d0cd8f5b699efcb6418d7e8acfdb570f7a60322bce"
+    if Hardware::CPU.intel?
+      url "https://github.com/0x20F/carbon/releases/download/v1.1.2/carbon_1.1.2_Darwin_x86_64.tar.gz"
+      sha256 "1cd9865dc44ae7af86f99eb043a7826eb0730e1b735b9c78cd4bd0e261a5a99a"
 
       def install
         bin.install "carbon"
@@ -28,16 +28,16 @@ class Carbon < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/0x20F/carbon/releases/download/v1.1.1/carbon_1.1.1_Linux_arm64.tar.gz"
-      sha256 "8eac879cbd0e39d07b5f9dc5b34808603a1bcf33415f65ba165da1ac20daf40e"
+      url "https://github.com/0x20F/carbon/releases/download/v1.1.2/carbon_1.1.2_Linux_arm64.tar.gz"
+      sha256 "9eb67a9c632fff52fee82d1351412b2cb5b6c07da32883238634d4ea7f462179"
 
       def install
         bin.install "carbon"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/0x20F/carbon/releases/download/v1.1.1/carbon_1.1.1_Linux_x86_64.tar.gz"
-      sha256 "274e7dca207a149bf342db0b7442e0016732f585c484003b05dc215250b844e1"
+      url "https://github.com/0x20F/carbon/releases/download/v1.1.2/carbon_1.1.2_Linux_x86_64.tar.gz"
+      sha256 "4006145be346c73ed133def19ca4345e31baca120ffd49be6d5728c2c124be3f"
 
       def install
         bin.install "carbon"
